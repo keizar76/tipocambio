@@ -1,7 +1,0 @@
-DROP TABLE IF EXISTS TIPOCAMBIO;
-CREATE TABLE TIPOCAMBIO (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    monedaOrigen VARCHAR(3),
-    monedaDestino VARCHAR(3),
-    factorTipoCambio NUMBER(8,4)
-)

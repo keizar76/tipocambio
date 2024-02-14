@@ -1,10 +1,12 @@
-package com.banco.tipocambio.dto;
+package com.banco.tipocambio.dto.response;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class CalcularTipoCambioResponse {
@@ -16,4 +18,5 @@ public class CalcularTipoCambioResponse {
     private String divisaOrigen;
     private String divisaDestino;
     private String factorTipoCambio;
+    private String token;
 }

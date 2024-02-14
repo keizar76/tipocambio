@@ -2,10 +2,10 @@ package com.banco.tipocambio.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.banco.tipocambio.dto.CalcularTipoCambioRequest;
-import com.banco.tipocambio.dto.CalcularTipoCambioResponse;
+import com.banco.tipocambio.dto.request.CalcularTipoCambioRequest;
+import com.banco.tipocambio.dto.response.CalcularTipoCambioResponse;
 import com.banco.tipocambio.entities.TipoCambio;
-import com.banco.tipocambio.services.TipoCambioServicio;
+import com.banco.tipocambio.services.impl.TipoCambioServicioImpl;
 
 import lombok.RequiredArgsConstructor;
 
@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/tipocambio")
+@RequestMapping("/api/v1/tipocambio")
 @RequiredArgsConstructor
 public class TipoCambioController {
-    private final TipoCambioServicio tipoCambioServicio;
+    private final TipoCambioServicioImpl tipoCambioServicio;
     
     @PostMapping("calcularTipoCambio")
     public CalcularTipoCambioResponse calcularTipoCambio(@RequestBody CalcularTipoCambioRequest requestCalcular) {
