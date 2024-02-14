@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.banco.tipocambio.dto.request.CalcularTipoCambioRequest;
 import com.banco.tipocambio.dto.response.CalcularTipoCambioResponse;
 import com.banco.tipocambio.entities.TipoCambio;
+import com.banco.tipocambio.services.AuthenticationService;
 import com.banco.tipocambio.services.impl.TipoCambioServicioImpl;
 
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequiredArgsConstructor
 public class TipoCambioController {
     private final TipoCambioServicioImpl tipoCambioServicio;
+    private final AuthenticationService authenticationService;
     
     @PostMapping("calcularTipoCambio")
     public CalcularTipoCambioResponse calcularTipoCambio(@RequestBody CalcularTipoCambioRequest requestCalcular) {

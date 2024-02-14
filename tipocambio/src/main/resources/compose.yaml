@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile:
+      - docker
+  datasource:
+    url: ${H2_URL}
+    user_name: ${H2_USER}
+    password: ${H2_PWD}
