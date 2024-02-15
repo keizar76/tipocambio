@@ -36,7 +36,7 @@ public class TipoCambioController {
     
     @PostMapping("createTipoCambio")
     public void createTipoCambio(@RequestBody TipoCambio tipoCambio) {
-        tipoCambioServicio.createTipoCambio(null);
+        tipoCambioServicio.createTipoCambio(tipoCambio);
     }
     
     @GetMapping("getTipoCambioAll")
