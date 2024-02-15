@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TipocambioApplication<tipocambio>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.banco.tipocambio.TipocambioApplication",
+            "projectName": "tipocambio",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
