@@ -39,7 +39,7 @@ public class TipoCambioServicioImpl implements TipoCambioServicio {
         
     
         if(requestCalcular!=null){
-            TipoCambio tipoCambio = getTipoCambioByDivisas(requestCalcular.getDivisaOrigen(),requestCalcular.getDivisaDestino());
+            TipoCambio tipoCambio = getTipoCambioByDivisas(requestCalcular.getMonedaOrigen(),requestCalcular.getMonedaDestino());
             if (tipoCambio!=null) {
                 responseCalcular.setDivisaDestino(tipoCambio.getMonedaDestino());
                 responseCalcular.setDivisaOrigen(tipoCambio.getMonedaOrigen());

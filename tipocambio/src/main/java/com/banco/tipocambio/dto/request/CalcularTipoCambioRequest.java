@@ -12,8 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CalcularTipoCambioRequest {
     private String monto;
-    private String divisaOrigen;
-    private String divisaDestino;
-    private String email;
-    private String password;
+    private String monedaOrigen;
+    private String monedaDestino;
 }
