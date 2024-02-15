@@ -18,5 +18,4 @@ public class CalcularTipoCambioResponse {
     private String divisaOrigen;
     private String divisaDestino;
     private String factorTipoCambio;
-    private String token;
 }
