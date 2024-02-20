@@ -2,8 +2,6 @@ package com.banco.tipocambio.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.banco.tipocambio.dto.request.CalcularTipoCambioRequest;
-import com.banco.tipocambio.dto.response.CalcularTipoCambioResponse;
 import com.banco.tipocambio.entities.TipoCambio;
 import com.banco.tipocambio.services.impl.TipoCambioServicioImpl;
 
@@ -26,16 +24,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @CrossOrigin(origins = {"http://localhost:4200/"})
 public class TipoCambioController {
     private final TipoCambioServicioImpl tipoCambioServicio;
-    
-    @PostMapping("calcularTipoCambio")
-    public CalcularTipoCambioResponse calcularTipoCambio(@RequestBody CalcularTipoCambioRequest requestCalcular) {
-        CalcularTipoCambioResponse responseCalcular = new CalcularTipoCambioResponse();
-        if (requestCalcular!=null){
-            responseCalcular = tipoCambioServicio.calcularMontoCambio(requestCalcular);
-        }
-        
-        return responseCalcular;
-    }
     
     @PostMapping("createTipoCambio")
     public void createTipoCambio(@RequestBody TipoCambio tipoCambio) {
